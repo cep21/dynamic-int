@@ -12,7 +12,6 @@ and moves itself to a bigint when needed
 """
 readme = "README.md"
 keywords = ["big integer", "math", "bigint", "num"]
-license = "Apache 2.0"
 
 [dependencies]
 num = "*"
