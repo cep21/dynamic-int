@@ -1,6 +1,6 @@
 [package]
 
-name = "dynamic-int"
+name = "dynamic_int"
 version = "0.0.1"
 authors = ["Jack Lindamood <cep221@gmail.com>"]
 license = "Apache-2.0"
