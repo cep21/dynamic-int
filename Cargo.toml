@@ -1,0 +1,15 @@
+[package]
+
+name = "dynamic-int"
+version = "0.0.1"
+authors = ["Jack Lindamood <cep221@gmail.com>"]
+license = "Apache-2.0"
+homepage = "https://github.com/cep21/dynamic-int"
+repository = "https://github.com/cep21/dynamic-int"
+description = """
+Wrapper around integers and bigints that starts as an int
+and moves itself to a bigint when needed
+"""
+
+[dependencies]
+num = "*"
