@@ -36,7 +36,7 @@ impl DynamicChangingU64 {
             }
         }
     }
-    pub fn bits(&self) -> uint {
+    pub fn bits(&self) -> usize {
         match *self {
             DynamicChangingU64::Regular(ref v) => {
                 v.to_biguint().unwrap().bits()
@@ -48,9 +48,9 @@ impl DynamicChangingU64 {
     }
 }
 
-impl Add<uint> for DynamicChangingU64 {
+impl Add<u64> for DynamicChangingU64 {
     type Output = DynamicChangingU64;
-    fn add(self, other: uint) -> DynamicChangingU64 {
+    fn add(self, other: u64) -> DynamicChangingU64 {
         match self {
             DynamicChangingU64::Regular(ref v) => {
                 match v.checked_add(other as u64) {
@@ -66,9 +66,9 @@ impl Add<uint> for DynamicChangingU64 {
     }
 }
 
-impl Mul<uint> for DynamicChangingU64 {
+impl Mul<u64> for DynamicChangingU64 {
     type Output = DynamicChangingU64;
-    fn mul(self, other: uint) -> DynamicChangingU64 {
+    fn mul(self, other: u64) -> DynamicChangingU64 {
         match self {
             DynamicChangingU64::Regular(ref v) => {
                 match v.checked_mul(other as u64) {
@@ -87,9 +87,9 @@ impl Mul<uint> for DynamicChangingU64 {
     }
 }
 
-impl Shr<uint> for DynamicChangingU64 {
+impl Shr<usize> for DynamicChangingU64 {
     type Output = DynamicChangingU64;
-    fn shr(self, other: uint) -> DynamicChangingU64 {
+    fn shr(self, other: usize) -> DynamicChangingU64 {
         match self {
             DynamicChangingU64::Regular(ref v) => {
                 DynamicChangingU64::Regular(*v >> other)
